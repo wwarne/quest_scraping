@@ -54,7 +54,7 @@ class SvExitQuest(DeclarativeBase):
     description = Column('description', String, nullable=True)
     crawled = Column('crawled', DateTime)
     status = Column('status', String, nullable=True)
-    images = relationship('PhobiaQuestImage', back_populates='quest', cascade='all, delete-orphan')
+    images = relationship('SvExitQuestImage', back_populates='quest', cascade='all, delete-orphan')
 
 
 class SvExitQuestImage(DeclarativeBase):
