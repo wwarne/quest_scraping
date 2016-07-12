@@ -66,4 +66,4 @@ class SvExitQuestImage(DeclarativeBase):
     id = Column(Integer, primary_key=True)
     url = Column('url', String)
     quest_id = Column(Integer, ForeignKey('sv_exit_quests.id', ondelete='CASCADE'))
-    quest = relationship('PhobiaQuest', back_populates='images')
+    quest = relationship('SvExitQuest', back_populates='images')
